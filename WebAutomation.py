@@ -1,18 +1,18 @@
-from selenium import webdriver
+from selenium import webdriver 
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.by import By
+import time
 
-chromedriver = "E:\chromedriver"
-driver = webdriver.Chrome(chromedriver)
+driver = webdriver.Chrome(executable_path = 'E:\chromedriver')
+#driver = webdriver.Firefox(executable_path = 'E:\geckodriver.exe')
 
-driver.get('https://www.google.com/')
+XPATH = "//*[@id='block_top_menu']/ul/li[3]/a"
 
-a = driver.find_element_by_name("q")
-a.send_keys("harsh beniwal")
-a.send_keys(Keys.ENTER)
+driver.get('http://automationpractice.com/index.php')
+driver.find_element_by_xpath(XPATH).click() #clicking the button
 
+print(driver.title)
+print(driver.current_url)
 
-
-
-# search = driver.find_element_by_xpath('//*[@id="tsf"]/div[2]/div[1]/div[3]/center/input[1]')
-# search.send_keys(Keys.ENTER)
+time.sleep(5)
+#driver.close() #close only browser
+driver.quit() #closing all tabs in a browser
