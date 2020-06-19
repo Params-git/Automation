@@ -1,6 +1,6 @@
 # credentials
 
-NAME     = "name "
+NAME     = "name"
 EMAIL    = "email id"
 PASSWORD = "password"
 PHONE    = "phone no."
