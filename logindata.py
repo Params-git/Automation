@@ -1,8 +1,8 @@
 # credentials
 
 NAME     = "name"
-EMAIL    = "email id"
-PASSWORD = "password"
+EMAIL    = "EMAIL-ID"
+PASSWORD = "PASSWORD"
 PHONE    = "phone no."
 ADDRESS  = "home address"
 PINCODE  = "city pincode"
